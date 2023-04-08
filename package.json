@@ -1,0 +1,29 @@
+{
+  "name": "nodeapi",
+  "version": "1.0.0",
+  "description": "This repository is used to fetch the data from public api and that data is used in food junction app for rendering the restaurant in React application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "parcel build server.js --target node --out-dir dist",
+    "serve": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Shubham Pakhale",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cross-fetch": "^3.1.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "parcel": "^2.8.3",
+    "parcel-bundler": "^1.12.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShubhamJPakhale"
+  }
+}
