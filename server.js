@@ -10,7 +10,9 @@ app.get('/restaurant',(req,res)=>{
     const { lat, lng } = req.query;
     console.log(req.query);
 
-    const url = `http://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${lng}`;
+    const url = `http://www.swiggy.com/dapi/restaurants/list/v5?lat=${lat}&lng=${lng}&page_type=DESKTOP_WEB_LISTING`;
+
+    //https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5204303&lng=73.8567437&page_type=DESKTOP_WEB_LISTING
 
     fetch(url,{
         headers:{
@@ -36,7 +38,9 @@ app.get('/menu',(req,res)=>{
     const { lat, lng, restaurantId } = req.query;
     console.log(req.query);
 
-    const url = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=${lat}&lng=${lng}&restaurantId=${restaurantId}`;
+    const url = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=${lat}&lng=${lng}&restaurantId=${restaurantId}&submitAction=ENTER`;
+
+    //https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.5204303&lng=73.8567437&restaurantId=200193&submitAction=ENTER
 
     fetch(url,{
         headers:{
@@ -60,7 +64,7 @@ app.get('/menu',(req,res)=>{
 
 app.get('/', (req, res) =>{
     res.send("Welcome to the world of Food Junction Application !!!");
-  })
+})
 
   app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
