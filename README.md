@@ -1,2 +1,2 @@
 # FoodJunctionApi
-This repositoy is used to call the third party api and this data is used in to food Junction application for rendering restaurant
+In this repository, consist of code of Node.js Module which is fetching data from third party api which having CORS(cross origin resource sharing) issue with browser protocol so to avoid this issue i have used Node.js CORS npm package for fetching data. 
